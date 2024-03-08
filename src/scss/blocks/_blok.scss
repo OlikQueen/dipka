@@ -1,0 +1,87 @@
+@import "../mixins";
+
+.blok {
+    width: 300px;
+    margin-bottom: 10%;
+
+    @include mq(md) {
+        width: 350px;
+    }
+    @include mq(lg) {
+        width: 400px;
+    }
+    @include mq(xxl) {
+        width: 450px;
+    }
+
+    &:active {
+        &:hover {
+            box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5);
+        }
+    }
+    &:hover {
+        box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5);
+    }
+
+    &__wap {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        
+        gap: 10px;
+    }
+    
+    &__img-fluid {
+        width: 100%; 
+    }
+
+    &__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+        gap: 10px;
+    }
+
+    &__h5 {
+        color: #131230;
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+        font-weight: 700;
+
+        @include mq(md) {
+            font-size: 25px;
+        }
+        @include mq(lg) {
+            font-size: 30px;
+        }
+        @include mq(xxl) {
+            font-size: 35px;
+        }
+    }
+
+    &__span{
+        color: #ffb606;
+        font-style: italic;
+    }
+
+    &__p {
+        color: #777;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+
+        @include mq(md) {
+            font-size: 20px;
+        }
+        @include mq(lg) {
+            font-size: 25px;
+        }
+        @include mq(xxl) {
+            font-size: 30px;
+        }
+    }
+}

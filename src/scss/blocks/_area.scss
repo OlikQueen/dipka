@@ -1,0 +1,122 @@
+@import "../mixins";
+
+.area {
+    background-image: url(../img/reservation-bg.jpg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+    &__wap {
+        
+        height: 300px;
+
+        @include mq(md) {
+            height: 350px;
+        }
+
+        @include mq(lg) {
+            height: 500px;
+        }
+
+        @include mq(xl) {
+            height: 600px;
+        }
+
+        @include mq(xxl) {
+            height: 700px;
+        }
+    }
+
+    &__container {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        height: 200px;
+        text-align: center;
+
+        @include mq(md) {
+            height: 350px;
+        }
+        @include mq(lg) {
+            height: 500px;
+        }
+        @include mq(xl) {
+            height: 600px;
+        }
+        @include mq(xxl) {
+            height: 700px;
+        }
+    }
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+    &__template{
+        margin-top: 5%;
+
+    }
+
+    &__h2 {
+        color: #fff;
+        font-size: 18px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+
+        @include mq(md) {
+            font-size: 25px;
+        }
+
+        @include mq(lg) {
+            font-size: 30px;
+        }
+
+        @include mq(xl) {
+            font-size: 35px;
+        }
+    }
+
+
+    &__h4 {
+        color: #fff;
+        font-size: 16px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+
+        @include mq(md) {
+            font-size: 20px;
+        }
+
+        @include mq(lg) {
+            font-size: 35px;
+        }
+
+        @include mq(xl) {
+            font-size: 40px;
+        }
+
+    }
+
+    &__template {
+        width: 256px;
+
+        @include mq(xl) {
+            width: 300px;
+            font-size: 20px;
+        }
+
+        @include mq(xxl) {
+            width: 350px;
+            font-size: 25px;
+        }
+    }
+}

@@ -1,0 +1,173 @@
+@import "../mixins";
+
+.welcome {
+    margin-top: 10%;
+
+    &__container {
+        padding-inline: 8%;
+    }
+
+    &__rz {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mq(md) {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        @include mq(lg) {
+            gap: 70px;
+        }
+
+        @include mq(xl) {
+            gap: 80px;
+        }
+
+        @include mq(xxl) {
+            gap: 300px;
+        }
+    }
+
+    &__right-content {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__h3 {
+        color: #131230;
+        font-family: "Playfair Display", serif;
+        font-size: 30px;
+        font-weight: 700;
+
+        @include mq(lg) {
+            font-size: 40px;
+        }
+
+        @include mq(xl) {
+            font-size: 45px;
+        }
+
+        @include mq(xxl) {
+            font-size: 55px;
+        }
+    }
+
+    &__span {
+        color: #ffb606;
+        font-style: italic;
+    }
+
+    &__p {
+        color: #777;
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+        font-weight: 400;
+
+        @include mq(md) {
+            width: 300px;
+        }
+
+        @include mq(lg) {
+            font-size: 30px;
+        }
+
+        @include mq(xl) {
+            font-size: 35px;
+            width: 500px;
+        }
+
+        @include mq(xxl) {
+            width: 600px;
+        }
+    }
+
+    &__a {
+        display: flex;
+        padding: 12px 30px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        height: auto;        
+
+        background: #ffb606;
+        border-radius: 3px;
+
+        text-decoration: none;
+
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        color: #131230;
+
+        @include mq(md) {
+            width: 300px;
+        }
+
+        @include mq(lg) {
+            width: 350px;
+            font-size: 25px;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 60%, 100% {
+                transform: translateY(0);
+                transform: translateY(0);
+            }
+        
+            40% {
+                transform: translateY(-20px);
+                transform: translateY(-20px);
+            }
+        
+            80% {
+                transform: translateY(-10px);
+                transform: translateY(-10px);
+            }
+        }
+
+        &:hover {
+            animation: bounce 1s;
+        }
+
+        &:active {
+            &:hover {
+                border-radius: 50px;
+            }
+        }     
+    }
+
+    &__img {
+        width: 300px;
+        height: 300px;
+
+        @include mq(md) {
+            width: 400px;
+            height: 400px;
+        }
+
+        @include mq(lg) {
+            width: 500px;
+            height: 500px;
+        }
+
+        @include mq(xl) {
+            width: 600px;
+            height: 600px;
+        }
+
+        @include mq(xxl) {
+            width: 750px;
+            height: 750px;
+        }
+    }
+}

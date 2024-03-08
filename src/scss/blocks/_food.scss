@@ -1,0 +1,88 @@
+@import "../mixins";
+
+.food {
+    margin-top: 10%;
+
+    @include mq(md) {
+        padding-inline: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__h3 {
+        color: #131230;
+        font-family: "Playfair Display", serif;
+        font-size: 36px;
+        font-weight: 700;
+
+
+        @include mq(md) {
+            font-size: 45px;
+        }
+
+        @include mq(lg) {
+            font-size: 60px;
+        }
+
+        @include mq(xl) {
+            font-size: 65px;
+        }
+    }
+
+    &__span {
+        color: #ffb606;
+        font-style: italic;
+    }
+
+    &__bloks {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (min-width: 760px) {
+        &__bloks {
+            padding-top: 5%;
+            border: 1px solid silver;
+            flex-direction: row;
+            align-items: normal;
+            justify-content: space-around;
+
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__p {
+        color: #777;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 2%;
+        text-decoration: underline;
+        text-align: center;
+        margin-top: 10%;
+
+        @include mq(md) {
+            font-size: 20px;
+        }
+
+        @include mq(lg) {
+            font-size: 25px;
+        }
+
+        @include mq(xxl) {
+            font-size: 30px;
+        }
+    }
+}
